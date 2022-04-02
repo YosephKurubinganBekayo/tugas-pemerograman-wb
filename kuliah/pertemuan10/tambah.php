@@ -29,39 +29,39 @@ if (isset($_POST['tambah'])) {
     <ul>
       <li>
         <label>
-          nim :
-          <input type="int" name="nim" autofocus required>
+          Nama :
+          <input type="text" name="nama" autofocus required>
         </label>
       </li>
       <li>
         <label>
-          namamhs :
-          <input type="text" name="namamhs" required>
+          NRP :
+          <input type="text" name="nrp" required>
         </label>
       </li>
       <li>
         <label>
-          jurusan :
+          Email :
+          <input type="text" name="email" required>
+        </label>
+      </li>
+      <li>
+        <label>
+          Jurusan :
           <input type="text" name="jurusan" required>
         </label>
       </li>
       <li>
         <label>
-          tempat_lahir :
-          <input type="text" name="tempat_lahir" required>
-        </label>
-      </li>
-      <li>
-        <label>
-          totalsks :
-          <input type="text" name="totalsks" required>
+          Gambar :
+          <input type="text" name="gambar" required>
         </label>
       </li>
       <li>
         <button type="submit" name="tambah">Tambah Data!</button>
       </li>
     </ul>
-  </form>s
+  </form>
 </body>
 
 </html>

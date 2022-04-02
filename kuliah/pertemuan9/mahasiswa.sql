@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2022 at 04:29 AM
+-- Generation Time: Apr 02, 2022 at 01:23 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -28,23 +28,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `mahasiswa` (
-  `idmhs` int(4) NOT NULL,
-  `nim` int(8) NOT NULL,
-  `namamhs` text NOT NULL,
-  `tempat_lahir` text NOT NULL,
-  `jurusan` text NOT NULL,
-  `totalsks` int(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `nrp` char(9) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `jurusan` varchar(255) NOT NULL,
+  `gambar` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`idmhs`, `nim`, `namamhs`, `tempat_lahir`, `jurusan`, `totalsks`) VALUES
-(1, 21120228, 'kurnia bekayo', 'lewoleba', 'teknik informatika', 20),
-(2, 21120228, 'patris', 'muruona', 'akuntansi', 19),
-(3, 21120227, 'patrisius', 'lembata', 'akuntansi', 22),
-(5, 21120223, 'yunus', '', 'tkj', 23);
+INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`, `gambar`) VALUES
+(1, 'Sandhika Galih', '043040023', 'sandhikagalih@unpas.ac.id', 'Teknik Informatika', 'sandhika.jpg'),
+(2, 'Doddy Ferdiansyah', '153040123', 'doddy@gmail.com', 'Teknik Mesin', 'doddy.jpg'),
+(3, 'Erik', '023040321', 'erik@yahoo.com', 'Teknik Industri', 'erik.jpg');
 
 --
 -- Indexes for dumped tables
@@ -54,7 +53,7 @@ INSERT INTO `mahasiswa` (`idmhs`, `nim`, `namamhs`, `tempat_lahir`, `jurusan`, `
 -- Indexes for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  ADD PRIMARY KEY (`idmhs`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -64,7 +63,7 @@ ALTER TABLE `mahasiswa`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `idmhs` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
